@@ -2,13 +2,13 @@
 REPO_PATH=$(pwd)
 
 # Copy source file
-echo "==> Copying source"
+echo "==> Copying source files"
 rm -rf build
 mkdir build
 cp -r src/myapi src/tests build
 
 # Build module
-echo "==> Building module"
+echo "==> Building modules"
 cd build/myapi
 python setup.py build_ext --inplace
 

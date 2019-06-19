@@ -1,4 +1,4 @@
-from .app import app
+from .app import app, load_model
 from .clf import *
 from .vecutil import *
 
