@@ -29,4 +29,7 @@ if [[ $? -eq "0" ]]; then
     echo "==> Passed testing, Archive a package"
     cd ${REPO_PATH}/build
     tar cvfz ${PACKAGE_NAME}.tar.gz ../requirements.txt ${PACKAGE_NAME}/*
+    
+    echo "Done ..."
+    echo "Archived package is saved at ${REPO_PATH}/build/${PACKAGE_NAME}.tar.gz"
 fi
