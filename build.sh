@@ -40,6 +40,8 @@ if [[ $? -eq "0" ]]; then
 
     echo "==> Passed testing, Archive a package"
     cd ${REPO_PATH}/build
+    # Clean cached byte code
+    find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
     tar cvfz ${PACKAGE_NAME}.tar.gz ../requirements.txt ${PACKAGE_NAME}/*
     
     echo "Done ..."
